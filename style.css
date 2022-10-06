@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@500&family=Nunito:wght@300;400&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+nav{
+    background-color: black;
+    color: white;
+    height: 50px;
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Nunito', sans-serif;
+}
+
+nav ul{
+    list-style-type: none;
+}
+
+
+.gameContainer{
+    /* background-color: rgb(85, 65, 103); */
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.line{
+    background-color: rgb(69, 20, 111);
+    width: 0;
+    height: 3px;
+    position: absolute;
+    transition: width 0.5s ease-in-out;
+
+}
+
+
+.container{
+    display: grid;
+    grid-template-rows: repeat(3, 10vw);
+    grid-template-columns: repeat(3, 10vw);
+    font-family: 'Nunito', sans-serif;
+    position: relative;
+
+}
+
+.box{
+    border: 2px solid black;
+    font-size: 6vw;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.box:hover{
+    background-color: rgb(226, 215, 236);
+}
+
+
+.gameInfo{
+    margin-right: 200px;
+    padding: 10px 40px;
+    font-family: 'Baloo Bhai 2', cursive;
+}
+
+.imgBox img{
+    width: 0;
+    transition: width 1s ease-in-out;
+}
+
+.bl-0{
+    border-left: 0;
+}
+
+.br-0{
+    border-right: 0;
+}
+
+.bt-0{
+    border-top: 0;
+}
+
+.bb-0{
+    border-bottom: 0;
+}
+
+
+#reset{
+    margin: 4px 23px;
+    padding: 3px 17px;
+    background-color: #e1dae5;
+    border-radius: 12px;
+    font-family: 'Baloo Bhai 2', cursive;
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
+
+}
+
+
+@media screen and (max-width: 600px)
+{
+     .gameContainer{
+        flex-wrap: wrap;
+     }
+
+     .container {
+        grid-template-rows: repeat(3, 15vw);
+        grid-template-columns: repeat(3, 15vw);
+     }
+}
